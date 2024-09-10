@@ -1,0 +1,298 @@
+.container {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    }
+    #navbar li{
+    display:inline-block;
+    color:#ffffff;
+    }
+    #navbar a{
+    text-decoration:none;
+    font-size:22px;
+    padding-right:15px;
+    color:#ffffff;
+    }
+    .heading{
+    padding: 2em 10em;
+    padding-left:50px;
+    padding-top:100px;
+    font: normal 40px/50px Montserrat, sans-serif;
+    color: #ffffff;
+    }
+    .heading h1{
+    height:20px;
+    float:left;
+    margin-right:02 em;
+    }
+    .heading b{
+    float: left;
+    overflow: hidden;
+    position: relative;
+    height: 50px;
+    top: 40px;
+    }
+    .heading .inner{
+    display: inline-block;
+    color: #e74c3c;
+    position: relative;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+
+    -webkit-animation:move 5s;
+    -moz-animation:move 8s;
+    -ms-animation:move 8s;
+    -o-animation:move 8s;
+    animation:move 8s;
+    -webkit-animation-iteration-count:infinite;
+    -moz-animation-iteration-count:infinite;
+    -ms-animation-iteration-count:infinite;
+    -o-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -ms-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s;
+    }
+    @keyframes move{
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+    }
+
+    @-webkit-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+    }
+    @-moz-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+    }
+    @-o-keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+    }
+    @keyframes move {
+    0%  { top: 0px; }
+    20% { top: -50px; }
+    40% { top: -100px; }
+    60% { top: -150px; }
+    80% { top: -200px; }
+    }
+    .sliding-images {
+        position: absolute;
+        transform: rotate(45deg);
+    }
+    #img1 {
+        top: -200;
+        right: -280;
+        width: 700px;
+    }
+    #img2 {
+        top: -300;
+        right: 550;
+        width: 500px;
+    }
+    #img3 {
+        top: -12;
+        right: 440;
+        width: 215px;
+    }
+    #img4 {
+        top: 236;
+        right: 78;
+        width: 450px;
+    }
+    #img5 {
+        bottom: -100;
+        right: -30;
+        width: 150px;
+    }
+    #img6 {
+        bottom: -290;
+        right: 210;
+        width: 600px;
+    }
+    @keyframes move {
+        0% { top: 0px; }
+        20% { top: -50px; }
+        40% { top: -100px; }
+        60% { top: -150px; }
+        80% { top: -200px; }
+    }
+
+    @keyframes slide {
+        0% { transform: translate(-50px, -50px); }
+        25% { transform: translate(0, 0); }
+        50% { transform: translate(50px, 50px); }
+        75% { transform: translate(100px, 100px); }
+        100% { transform: translate(150px, 150px); }
+    }
+#login tr,td{
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200px;
+    font-style: normal;
+    font-size: 20px;
+}
+#logo{
+    font-family:Great Vibes, cursive;
+    font-weight: 600;
+    font-size: larger;
+}
+#login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/bg_image_login.jpg");
+    background-size: cover;
+    height:100vh;
+}
+#login form{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200px;
+    font-style: normal;
+    height: 300px;
+    width: 300px;
+    margin: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+}
+#register {
+    background-image: url("../assets/bg_image_register.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#register form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:400px;
+    height:650px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin: 100px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200px;
+    font-style: normal;
+    font-size: 20px;
+
+}
+#register td{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200px;
+    font-style: normal;
+    font-size: 20px;
+}
+#register .msg {
+    display: none;
+    font-size: 0.7rem;
+}
+#theme {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200px;
+    font-style: normal;
+    font-size: 15px;
+}
+.theme-column {
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
+}
+.theme-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.theme-card label {
+    font-weight: bold;
+}
+.theme-card input[type="checkbox"] {
+    margin-top: 10px;
+}
+#submit-button {
+    display: block;
+    margin: 20px auto; 
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:200px;
+    font-style: normal;
+    font-size: 15px;
+}
+
+#submit-button:hover {
+    background-color: #0056b3; 
+}
+#editor-container {
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+  .ql-toolbar {
+    border-bottom: 1px solid #ccc;
+  }
+  .ql-container {
+    min-height: 500px; 
+  }
+  .ql-editor {
+    font-size: 16px;
+    color: #333;
+    
+  }
+  .ql-editor p {
+    margin: 0;
+    padding: 0;
+    
+  }
+  .ql-editor img {
+    max-width: 100%;
+    height: auto;
+  }
