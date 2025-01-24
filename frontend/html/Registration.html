@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" type="text/css" href="../css/Styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="../php/user_reg.php">
+        <title>Register</title>
+    </head>
+    <body>
+        <script>
+            function validate (){
+            var username = document.getElementById("username").value.trim();
+            var email = document.getElementById("email").value.trim();
+            var password = document.getElementById("password").value.trim();
+            var password2 = document.getElementById("password2").value.trim();
+            var name = document.getElementById("name").value.trim();
+            usernameRegex=/^\w{5,16}$/;
+            emailRegex=/^\w+([\.-]?\w)*@\w+([\.-]?\w)*(\.\w{2,3})*$/;
+            passwordRegex=/^(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&*]).{8,20}$/;
+            nameRegex=/^[a-zA-Z\s]{3,30}$/;
+                
+                if(!usernameRegex.test(username))
+                {
+                    document.getElementById('uname_error').innerHTML="Username should be atleast 5 characters long.";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('uname_error').innerHTML="";
+                }
+                if(!emailRegex.test(email))
+                {
+                    document.getElementById('email_error').innerHTML="Email not in correct format.";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('email_error').innerHTML="";
+                }
+                if(!passwordRegex.test(password))
+                {
+                    document.getElementById('pwd_error').innerHTML="Password not in correct format.";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('pwd_error').innerHTML="";
+                }
+                if(password2==="")
+                {
+                    document.getElementById('c_pwd_error').innerHTML="Confirm password can't be empty.";
+                    return false;
+                }
+                if(password2!=password)
+                {
+                    document.getElementById('c_pwd_error').innerHTML="Passwords don't match.";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('c_pwd_error').innerHTML="";
+                }
+                if(!nameRegex.test(name))
+                {
+                    document.getElementById('name_error').innerHTML="Name should have only alphabets.";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('name_error').innerHTML="";
+                }
+        }
+        </script>
+        <div id="register">
+        <form action="../php/user_reg.php" method="POST">
+            <h3>Registration Form</h3>
+                    <label for="username">UserName</label>
+                    <input type="text" placeholder="UserName" name="username" id="username" required>
+                    <span class="msg" id="uname_error"></span>
+
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email" name="email" id="email" required>
+                    <span class="msg" id="email_error"></span>
+                    
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" name="password" id="password" required>
+                    <span class="msg" id="pwd_error"></span>
+                    
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" placeholder="Confirm Password" name="password2" id="password2" required>
+                    <span class="msg" id="c_pwd_error"></span>
+                    
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Name" name="name" id="name" required>
+                    <span class="msg" id="name_error"></span>
+                    
+                    <label for="Bio">Bio</label>
+                    <textarea rows="4" cols="30" required name="bio" id="bio"></textarea>
+                    <span class="msg"></span>
+                    
+                    <label for="date">Date of Birth</label>
+                    <input type="date" name="date" id="date" min="1930-01-01" required>
+                    <span class="msg"></span>
+                    
+                    <label for="gender">Gender</label>
+                    <select placeholder="select an option" name="gender" id="gender" required>
+                        <option value="" id="gender" required></option>
+                        <option value="Male" id="gender" required>Male</option>
+                        <option value="Female" id="gender" required>Female</option>
+                        <option value="Other" id="gender" required>Other</option>
+                        <option value="nm" id="gender" required>Prefer not to tell</option>
+                    </select>
+                    <span class="msg"></span>
+            <br>
+            <button type="submit" onclick="validate()">Register</button>
+        </form>
+        </div>
+    </body>
+</html>

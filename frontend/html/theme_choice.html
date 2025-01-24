@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose your themes</title>
+    <link rel="stylesheet" type="text/css" href="../css/Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Choose Themes</title>
+</head>
+<body>
+    <div id="theme">
+        <form action="../php/themes.php" method="post">
+            <h1>Choose Theme</h1>
+            <div class="theme-column">
+                <div class="theme-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1709143101313-d73dafff9e4d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <label for="identity">Identity and Belonging</label><br>
+                    <input type="checkbox" name="themes[]" value="Identity and Belonging" id="identity">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1627593561571-f4eab5818365?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <label for="environment">Environmental Conservation</label><br>
+                    <input type="checkbox" name="themes[]" value="Environmental Conservation" id="environment">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <label for="technology">Technology and Humanity</label><br>
+                    <input type="checkbox" name="themes[]" value="Technology and Humanity" id="technology">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <label for="mental_health">Mental Health Awareness</label><br>
+                    <input type="checkbox" name="themes[]" value="Mental Health Awareness" id="mental_health">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1591621839646-246cf85f9c91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNvY2lhbCUyMGp1c3RpY2UlMjBhbmQlMjBlcXVpdHl8ZW58MHx8MHx8fDA%3D');">
+                    <label for="justice">Social Justice and Equity</label><br>
+                    <input type="checkbox" name="themes[]" value="Social Justice and Equity" id="justice">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1631295076127-0b7a86635fd3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGN1bHR1cmFsJTIwZGl2ZXJzaXR5fGVufDB8fDB8fHww');">
+                    <label for="diversity">Cultural Diversity</label><br>
+                    <input type="checkbox" name="themes[]" value="Cultural Diversity" id="diversity">
+                </div>
+            </div>
+            <div class="theme-column">
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1531860711453-b2f3b6453611?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZXhwbG9yYXRpb24lMjBvZiUyMHRoZSUyMHVua25vd258ZW58MHx8MHx8fDA%3D');">
+                    <label for="exploration">Exploration of the Unknown</label><br>
+                    <input type="checkbox" name="themes[]" value="Exploration of the Unknown" id="exploration">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1515191107209-c28698631303?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cG93ZXIlMjBhbmQlMjBjb3JydXB0aW9ufGVufDB8fDB8fHww');">
+                    <label for="power">Power and Corruption</label><br>
+                    <input type="checkbox" name="themes[]" value="Power and Corruption" id="power">
+                </div>
+                <div class="theme-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1661277652743-48535ad4d705?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZmFtaWx5JTIwZHluYW1pY3N8ZW58MHx8MHx8fDA%3D');">
+                    <label for="family">Family Dynamics</label><br>
+                    <input type="checkbox" name="themes[]" value="Family Dynamics" id="family">
+                </div>
+                <div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1683009427041-d810728a7cb6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8UmVzaWxpZW5jZSUyMGFuZCUyME92ZXJjb21pbmclMjBBZHZlcnNpdHl8ZW58MHx8MHx8fDA%3D');">
+                    <label for="resilience">Resilience and Overcoming Adversity</label><br>
+                    <input type="checkbox" name="themes[]" value="Resilience and Overcoming Adversity" id="resilience">
+                </div>
+		<div class="theme-card" style="background-image: url('https://images.unsplash.com/photo-1608468101682-9cea710bcd6b?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <label for="resilience">Art and Creative Expression</label><br>
+                    <input type="checkbox" name="themes[]" value="Art and Creative Expression" id="art">
+                </div>
+		<div class="theme-card" style="background-image: url('https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                    <label for="resilience">Travel and Adventure</label><br>
+                    <input type="checkbox" name="themes[]" value="Travel and Adventure" id="travel">
+                </div>
+
+            </div>
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
