@@ -68,50 +68,62 @@
     <h2 class="mb-4 text-center">Latest Blog Posts</h2>
     <div class="blog-container">
     <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "quillverse";
+      $servername = "sql111.infinityfree.com";
+      $username = "if0_38173944";
+      $password = "FB8x4t55Kgsg6K";
+      $dbname = "if0_38173944_quillverse";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+      // Check connection
+      if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+      }
 
-// Query to fetch all blogs from the database
-$sql = "SELECT * FROM blogs order by blog_id DESC";
-$result = $conn->query($sql);
+      // Query to fetch all blogs from the database
+      $sql = "SELECT * FROM blogs ORDER BY blog_id DESC";
+      $result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while ($row = $result->fetch_assoc()) {
-        // Generate an image URL based on the blog title
-        $title = $row["title"];
-        $image_url = 'https://source.unsplash.com/1600x900/?' . str_replace(' ', ',', $title) . ',books,reading,' . rand(1, 1000);
-        echo '<div class="blog-post mr-4">';
-        echo '<img src="' . $image_url . '" alt="Blog Post Image">';
-        echo '<div class="blog-post-content">';
-        echo '<h3 class="mt-1">' . $row["title"] . '</h3>';
-        
-        // Display only beginning few words with overflow hidden
-        $content = $row["content"];
-        $word_limit = 50; // Adjust the number of words to display
-        $content_words = explode(' ', $content);
-        $short_content = implode(' ', array_slice($content_words, 0, $word_limit));
-        echo '<p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' . $short_content . '</p>';
-        
-        echo '<a href="read_blog1.php?title=' . urlencode($row["title"]) . '&content=' . urlencode($row["content"]) . '" class="btn btn-primary">Read More</a>';
-        echo '</div></div>';
-    }
-} else {
-    echo "No blogs found";
-}
-$conn->close();
-?>
+      // Array of image filenames (you should upload these images to your server)
+      $image_files = [
+          'cover1.jpg', 'cover2.jpg', 'cover3.jpg', 'cover4.jpg', 'cover5.jpg','cover6.jpg'
+      ];
+
+      $image_index = 0;  // Start with the first image
+
+      if ($result->num_rows > 0) {
+          // Output data of each row
+          while ($row = $result->fetch_assoc()) {
+              // Get the title for the image
+              $title = $row["title"];
+              
+              // Get the image URL (cycling through the 10 images)
+              $image_url = '../assets/covers/' . $image_files[$image_index];
+              
+              // Update image index (loop back to 0 after 10 images)
+              $image_index = ($image_index + 1) % count($image_files);
+
+              echo '<div class="blog-post mr-4">';
+              echo '<img src="' . $image_url . '" alt="Blog Post Image">';
+              echo '<div class="blog-post-content">';
+              echo '<h3 class="mt-1">' . $row["title"] . '</h3>';
+              
+              // Display only beginning few words with overflow hidden
+              $content = $row["content"];
+              $word_limit = 50; // Adjust the number of words to display
+              $content_words = explode(' ', $content);
+              $short_content = implode(' ', array_slice($content_words, 0, $word_limit));
+              echo '<p style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">' . $short_content . '</p>';
+              
+              echo '<a href="read_blog1.php?title=' . urlencode($row["title"]) . '&content=' . urlencode($row["content"]) . '" class="btn btn-primary">Read More</a>';
+              echo '</div></div>';
+          }
+      } else {
+          echo "No blogs found";
+      }
+      $conn->close();
+    ?>
     </div>
   </div>
 

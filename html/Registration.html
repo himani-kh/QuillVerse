@@ -1,7 +1,7 @@
 <html>
     <head>
         <title>Registration</title>
-        <link rel="stylesheet" type="text/css" href="../css/Styles.css">
+        <link rel="stylesheet" type="text/css" href="../css/registrationStyles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -74,10 +74,10 @@
         }
         </script>
         <div id="register">
+        <h2>Sign Up</h2>
         <form action="../php/user_reg.php" method="POST">
-            <h3>Registration Form</h3>
-                    <label for="username">UserName</label>
-                    <input type="text" placeholder="UserName" name="username" id="username" required>
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Username" name="username" id="username" required>
                     <span class="msg" id="uname_error"></span>
 
                     <label for="email">Email</label>
@@ -116,6 +116,7 @@
             <br>
             <button type="submit" onclick="validate()">Register</button>
         </form>
+        <p>Already have an account? <a href="login_page.html">Sign In</a></p>
         </div>
     </body>
 </html>

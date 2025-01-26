@@ -46,10 +46,10 @@ $title = $_GET['title'];
 $content = $_GET['content'];
 
 // Database connection parameters
-$servername = "localhost"; // Change this if your MySQL server is hosted elsewhere
-$username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
-$dbname = "quillverse"; // Replace with your database name
+$servername = "sql111.infinityfree.com";
+$username = "if0_38173944";
+$password = "FB8x4t55Kgsg6K";
+$dbname = "if0_38173944_quillverse";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

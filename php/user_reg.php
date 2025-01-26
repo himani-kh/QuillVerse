@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // Database connection parameters
-$servername = "localhost"; // Change this if your MySQL server is hosted elsewhere
-$username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
-$dbname = "quillverse"; // Replace with your database name
+$servername = "sql111.infinityfree.com";
+$username = "if0_38173944";
+$password = "FB8x4t55Kgsg6K";
+$dbname = "if0_38173944_quillverse";
 
 // Add debugging statement
 echo "Connecting to database...<br>";

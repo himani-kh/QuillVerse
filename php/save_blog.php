@@ -9,10 +9,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "quillverse";
+$servername = "sql111.infinityfree.com";
+$username = "if0_38173944";
+$password = "FB8x4t55Kgsg6K";
+$dbname = "if0_38173944_quillverse";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -51,7 +51,7 @@ if ($stmt->execute()) {
     $stmt_update = $conn->prepare($sql_update);
     $stmt_update->bind_param("s", $author_id);
     $stmt_update->execute();
-    header("Location: ../php/index.php");
+    header("Location: ../index.php");
 } else {
     echo "Error: " . $stmt->error;
 }

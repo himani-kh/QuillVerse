@@ -1,0 +1,122 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    height: 100%; /* Make sure body and html cover full viewport */
+}
+
+/* Fullscreen Background */
+body {
+    height: 100vh; /* Set body height to the full viewport */
+    background-image: url("../assets/bg_image_login.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    color: #333;
+}
+
+/* Login Container */
+#login {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Page Title */
+#login h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Center the table inside the login container */
+#login table {
+    width: 100%; /* Ensure the table spans full width of the parent */
+    margin: 0 auto; /* This centers the table horizontally */
+    border-collapse: collapse; /* For better spacing between cells */
+}
+
+/* Labels */
+#login table td {
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+    color: #555;
+    display: block;
+}
+
+/* Input Fields */
+#login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Input Focus Effect */
+#login input:focus {
+    border-color: #7cb7ff;
+    box-shadow: 0 0 8px rgba(124, 183, 255, 0.5);
+    align-items: center;
+}
+
+/* Button Styling */
+#login button {
+    background: linear-gradient(135deg, #7cb7ff, #4291f5);
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    align-items: center;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#login button:hover {
+    background: linear-gradient(135deg, #4291f5, #7cb7ff);
+    box-shadow: 0 4px 15px rgba(66, 145, 245, 0.5);
+}
+
+/* Sign-Up Link */
+#login p.link {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#login p.link a {
+    color: #4291f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#login p.link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #login {
+        width: 90%;
+        padding: 20px;
+    }
+}

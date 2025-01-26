@@ -2,10 +2,10 @@
 session_start();
 
 // Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "quillverse";
+$servername = "sql111.infinityfree.com";
+$username = "if0_38173944";
+$password = "FB8x4t55Kgsg6K";
+$dbname = "if0_38173944_quillverse";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -36,7 +36,7 @@ if ($result->num_rows > 0) {
         setcookie('user_id', $row['user_id'], $expire, '/');
 
         // Redirect to dashboard or any other page
-        header("Location: ../php/index.php");
+        header("Location: ../index.php");
         exit();
     } else {
         // Password is incorrect

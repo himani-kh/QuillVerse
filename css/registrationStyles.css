@@ -1,0 +1,125 @@
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Fullscreen Background */
+body {
+    height: 100vh;
+    background-image: url("../assets/bg_image_register.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px; /* Add some top padding */
+    color: #333;
+}
+
+/* Registration Container */
+#register {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Page Title */
+#register h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #444;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Labels */
+#register label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+    text-align: left;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Inputs, Textarea, and Select */
+#register input, 
+#register textarea, 
+#register select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Hover and Focus Effects */
+#register input:focus, 
+#register textarea:focus, 
+#register select:focus {
+    border-color: #7cb7ff;
+    box-shadow: 0 0 8px rgba(124, 183, 255, 0.5);
+}
+
+/* Error Messages */
+.msg {
+    font-size: 0.8rem;
+    color: #ff5c5c;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Button Styling */
+#register button {
+    background: linear-gradient(135deg, #7cb7ff, #4291f5);
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+#register button:hover {
+    background: linear-gradient(135deg, #4291f5, #7cb7ff);
+    box-shadow: 0 4px 15px rgba(66, 145, 245, 0.5);
+}
+
+/* Sign In Link */
+#register p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#register p a {
+    color: #4291f5;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+#register p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #register {
+        width: 90%;
+        padding: 20px;
+    }
+}
